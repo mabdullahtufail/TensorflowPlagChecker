@@ -1,0 +1,224 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.tensorflow-similarity-container {
+  display: flex;
+  flex-direction: column;  /* Changed from default row to column */
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  gap: 20px;  /* Added gap between navbar and content */
+}
+
+.tensorflow-similarity-card {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 0 auto;  /* Center the card horizontally */
+}
+
+.tensorflow-similarity-card h2 {
+  margin: 0 0 20px 0;
+  color: #333333;
+}
+
+/* Rest of the CSS remains the same */
+.top-section {
+  position: sticky;
+  top: 0;
+  background: white;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.input-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.text-input {
+  width: 100%;
+  height: 200px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  resize: none;
+}
+
+.text-input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.check-button {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 200px;
+  margin: 0 auto;
+}
+
+.check-button:disabled {
+  background-color: #c4c4c4;
+  cursor: not-allowed;
+}
+
+.result {
+  margin-top: 20px;
+  padding-top: 20px;
+  text-align: left;
+}
+
+.result h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #333333;
+}
+
+.result ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 12px;
+}
+
+.result li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.result li:hover {
+  border-color: #007bff;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.word-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.word-index {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background-color: #e6f0ff;
+  color: #007bff;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 50%;
+}
+
+.word-text {
+  font-weight: 500;
+  color: #111827;
+}
+
+.percentage-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 140px;
+}
+
+.progress-bar {
+  width: 80px;
+  height: 6px;
+  background-color: #f3f4f6;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #007bff;
+  border-radius: 999px;
+  transition: width 0.3s ease;
+}
+
+.percentage-text {
+  font-size: 14px;
+  font-weight: 600;
+  color: #4b5563;
+  min-width: 45px;
+}
+
+.similarity-scores {
+  display: flex;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.similarity-score {
+  flex: 1;
+}
+
+.similarity-score-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.similarity-score-bar {
+  width: 100%;
+  height: 8px;
+  background-color: #f3f4f6;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.similarity-score-fill {
+  height: 100%;
+  background-color: #007bff;
+  border-radius: 999px;
+  transition: width 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .input-group {
+    grid-template-columns: 1fr;
+  }
+  
+  .tensorflow-similarity-card {
+    padding: 20px;
+  }
+  
+  .result ul {
+    grid-template-columns: 1fr;
+  }
+  
+  .similarity-scores {
+    flex-direction: column;
+  }
+}
